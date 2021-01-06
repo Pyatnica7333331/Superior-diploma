@@ -16,113 +16,7 @@
 a {
    text-decoration: none;
   } 
-@media (min-width:768px) {
-    .menu {
-      display: flex;
-      align-items: center;
-    }
-    .content {
-      display: flex;
-      max-width: 1170px;
-      padding: 64px 245px;
-      justify-content: space-between;
-    }
-    .container {
-        display: flex;
-        justify-content: space-between;
-        padding: 25px 245px;
-     }
-  }
-@media (min-width:1200px) {
-    .header {
-        background-image: url("../‪images/banner-bg.jpg");
-        height: 447px;
-        font-size: 13px;
-    }
-    .header-logo {
-      width: 245px;
-    }
-    h1 {
-      width: 710px;
-      font-size: 45px;
-      margin-top: 120px;
-    }
-    
-    .menu-list > li {
-      list-style-type: none;
-      text-transform: uppercase;
-      display: inline-block;
-      justify-content: space-between;
-      right: 0;
-    }
-    .menu-list > li:hover {
-      text-decoration: underline;
-    }
-    .menu-list-item:nth-child(n + 2) {
-      margin-left: 35px;
-    }
-    
-    .menu-link {
-      color: #ffffff;
-    }
-    footer {
-      margin-left: 245px;
-      margin-right: 245px;
-    }
-    .trend-list {
-      display: flex;
-      flex-wrap: nowrap;
-      }
-    .trend-card {
-      height:320px;
-      width: 25%;
-    }
-    .trend-card:nth-child(n + 2) {
-     margin-left: 2px;
-    }
-   .article-card {
-     display: flex;
-     }
-   .post-name-big a {
-      font-size: 20px;
-      line-height: 24px;
-     }
-  .article-image {
-      width: 381px;
-    }
-    .post-info {
-      margin-left: 30px;
-    }
-   .tags {
-      
-      margin-top: -6px;
-    } 
-  .side-bar {
-    min-width: 270px;
-    margin-left: 120px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    }
-  .side-new-post-list {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 60px;
-  }
-  .new-post-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    position: relative;
-   }
-  } 
-  
-@media (min-width:768px) and (max-width:1199px) {
-  .header {
-      background-image: url("../images/banner-bg-tablet.jpg");
-    }
- }
- 
+
 .menu {
     display: none;
   }
@@ -132,7 +26,7 @@ a {
     background-size: cover;
     background-position: center center;
     width: 100vw;
-    min-height: 620px;
+    min-height: 640px;
     background-color: #7e6f6f;
     position: relative;
     color: #ffffff;
@@ -148,9 +42,9 @@ a {
     opacity: 0.6;
     z-index: 2;
   }
-  .container {
-    padding-left: 45px;
-    padding-right: 45px;
+  .header-box {
+    width: 330px;
+    height: 640px;
     position: relative;
     z-index: 3;
     margin: auto;
@@ -168,7 +62,8 @@ a {
     text-align: center;
     padding-top: 40px;
   }
-  .trend-list {
+  .trend-list, .search, .subscription-section, .tags-list,
+   .side-new-post-list, .topics-list {
     margin-bottom: 45px;
   }
   .trend-list-name {
@@ -226,7 +121,7 @@ a {
   }
   
 .trend-card .post-name-big a {
-    color:#ffffff;
+  color:#ffffff;
   }
 .card-1 {
     background-image: url("../images/trend1.jpg");
@@ -242,10 +137,11 @@ a {
   }
   
 
-  .content {
+  .content, .side-bar, .footer-container {
     display: block;
-    margin-left: 15px;
-    margin-right: 15px;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
     } 
   .article-card:nth-child(n + 2) {
     margin-top: 60px;
@@ -297,17 +193,17 @@ a {
     display: inline-block;
     margin-top: 35px;
     margin-bottom: 50px;
+    font-size: 12px;
   }
   .article-date {
     color: #888888;
-    font-size: 12px;
     margin-right: 15px;
     padding-top: 0;
   }
-  span {
+  .author span {
     font-weight: bold;
-    font-size: 12px;
-  }
+   }
+  
   .new-post {
     display: flex;
     height: 70px;
@@ -337,7 +233,7 @@ a {
     position: relative;
     text-transform: uppercase;
     margin-bottom: 40px;
-    font-size: 14px;
+    font-size: 16px;
   }
   .new-post-name::after {
     content: "";
@@ -349,6 +245,9 @@ a {
     left: 50%;
     transform: translateX(-50%);
     top: 30px;
+  }
+  .side-new-post-list {
+    margin-top: 45px;
   }
   .side-post-info {
     margin-left: 18px;
@@ -379,6 +278,7 @@ a {
   
   .search {
     position: relative;
+    
   }
   .search input {
     width: 100%;
@@ -391,7 +291,7 @@ a {
     min-width: 50px;
     vertical-align: middle;
     background-repeat: no-repeat;
-    background-image: url("../images/search.svg");
+    background-image: url("../svg/search.svg");
     background-color: #b59f5b;
     background-repeat: no-repeat;
     background-position: center center;
@@ -408,10 +308,7 @@ a {
     height: 1px;
     width: 1px;
   }
-  .subscription-section {
-    margin-bottom: 60px;
-  }
-  .subscription-name::after {
+   .subscription-name::after {
     content: "";
     display: block;
     position: absolute;
@@ -437,9 +334,6 @@ a {
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;
-  }
-  .tags-list {
-    margin-bottom: 60px;
   }
   .tags-list-name::after {
     content: "";
@@ -509,22 +403,56 @@ a {
   .topics-list a:hover {
     color: #b59f5b;
   }
-  .section-name {
-    font-size: 16px;
+  .product-list {
+    margin-left: auto;
+    margin-left: auto;
+  }
+
+h3 {
+  font-size: 17px;
+  line-height: 22px;
+  text-transform: uppercase;
+  
+}
+.product-list-name::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 66px;
+    height: 3px;
+    background-color: #e1d9bd;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+ }
+  .product-list-item {
+    margin-bottom: 25px;
+    padding: 25px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .product-info {
+    margin-top: 25px;
   }
   .product-info a {
     color: #b59f5b;
   }
   .product-footer {
     display: flex;
+    padding-top: 25px;
     justify-content: space-between;
     align-items: flex-end;
   }
   .product-prices {
     display: flex;
+    font-weight: bold;
   }
   .old-price-product {
     text-decoration: line-through;
+    font-size: 14px;
+  }
+  .new-price-product {
+    font-size: 20px;
   }
   .product-button {
     border: none;
@@ -591,4 +519,138 @@ a {
     color: #999999;
     text-align: center;
   }
+ @media (min-width:1200px) {
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px 245px;
+   }
+  .main-content {
+    display: flex;
+    max-width: 1170px;
+    padding: 64px 245px;
+    justify-content: space-between;
+  }
+  .trend-list {
+    display: flex;
+    flex-wrap: nowrap;
+    }
+    .header {
+        background-image: url("../‪images/banner-bg.jpg");
+        height: 447px;
+        font-size: 13px;
+    }
+    .header-logo {
+      width: 245px;
+    }
+    h1 {
+      width: 710px;
+      font-size: 45px;
+      margin-top: 120px;
+    }
+    
+    .menu-list > li {
+      list-style-type: none;
+      text-transform: uppercase;
+      display: inline-block;
+      justify-content: space-between;
+      right: 0;
+    }
+    .menu-list > li:hover {
+      text-decoration: underline;
+    }
+    .menu-list-item:nth-child(n + 2) {
+      margin-left: 35px;
+    }
+    
+    .menu-link {
+      color: #ffffff;
+    }
+    footer {
+      margin-left: 245px;
+      margin-right: 245px;
+    }
+    
+    .trend-card {
+      height:320px;
+      width: 25%;
+    }
+    .trend-card:nth-child(n + 2) {
+     margin-left: 2px;
+    }
+   .article-card {
+     display: flex;
+     }
+   .post-name-big a {
+      font-size: 20px;
+      line-height: 24px;
+     }
+  .article-image {
+      width: 381px;
+    }
+    .post-info {
+      margin-left: 30px;
+    }
+   .tags {
+      
+      margin-top: -6px;
+    } 
+  .side-bar {
+    min-width: 270px;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+  .section-name {
+     font-size: 14px;
+   }
+  .side-new-post-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .new-post-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+   }
+  .trend-list, .search, .subscription-section, .tags-list, .side-new-post-list {
+    margin-bottom: 60px;
+  }
+  .product-list-name, .trend-list-name {
+    font-size: 20px;
+  }
+ } 
   
+@media (min-width:768px) and (max-width:1199px) {
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px 245px;
+   }
+  .main-content {
+    display: flex;
+    max-width: 1170px;
+    padding: 64px 245px;
+    justify-content: space-between;
+  }
+  .trend-list {
+    display: flex;
+    flex-wrap: nowrap;
+    }
+  .header {
+      background-image: url("../images/banner-bg-tablet.jpg");
+    }
+    .trend-card {
+      width: 50%;
+    }
+ } 
