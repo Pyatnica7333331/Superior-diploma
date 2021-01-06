@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Superior diploma</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -38,6 +38,7 @@
           <h1>Блог о творчестве, спорте и образе жизни</h1>
         </div>
       </header>
+      <section>
       <h2 class="trend-list-name section-name">Сейчас в тренде</h2>
         <div class="trend-list">
           <article class="trend-card card-1">
@@ -76,7 +77,8 @@
             </div>
           </article>
       </div>
-      <div class="content">
+      </section>
+      <div class="main-content">
         <main>
           <article class="article-card">
             <div class="article-image">
@@ -178,8 +180,7 @@
               </div>
             </div>
           </article>
-         </main>
-        </div>
+        </main>
         <aside class="side-bar">
           <section class="side-new-post-list">
             <h3 class="new-post-name section-name">Новые посты</h3>
@@ -265,9 +266,11 @@
               <li><a href="#0">Йога</a><sup>8</sup></li>
             </ul>
           </section>
-          <section>
-            <h2 class="product-list-name section-name">Наши изделия</h2>
-            <div class="product-list">
+        </aside>
+      </div>
+      <section>
+          <h2 class="product-list-name section-name">Наши изделия</h2>
+          <div class="product-list">
               <article class="product-list-item">
                 <picture class="product-image">
                   <source srcset="images/shop-item-desk1.jpg" media="(min-width: 1200px)">
@@ -296,7 +299,7 @@
                   <img src="images/shop-item-mobile2.jpg" alt="Подушка">
                 </picture>
                 <div class="product-info">
-                 <h3 class="product-name">Кукла "Зайчик"</h3>
+                 <h3 class="product-name">Кукла «Зайчик»</h3>
                  <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0">весенняя серия постов</a> в блоге и несколько подкастов.
                  </p>
                 </div>
@@ -321,16 +324,14 @@
                 </div>
                 <footer class="product-footer">
                   <div class="product-prices">
-                    <span class="old-price-product">500 ₽</span>
-                    <span class="new-price-product">400 ₽</span>
+                    <div class="old-price-product">500 ₽</div>
+                    <div class="new-price-product">400 ₽</div>
                   </div>
                   <button class="product-button" type="button">В магазин</button>
                 </footer>
               </article>
             </div>
-          </section>
-        </aside>
-      </div>
+      </section>
       <footer>
         <div class="footer-container">
           <adress class="widget-socials">
@@ -346,6 +347,7 @@
             </a>
             </address>
           </div>
-        <div class="copyright"><a href="#0">Copyright © 2009–2019 City Blog LLC.</a></div>
+        <div class="copyright"><a href="#0">Copyright © 2009–2019 City Blog LLC.</a>
+        </div>
       </footer>   
 </body>
