@@ -148,14 +148,13 @@ a {
     opacity: 0.6;
     z-index: 2;
   }
-  .header-box {
-    vertical-align: middle;
+  .container {
     padding-left: 45px;
     padding-right: 45px;
     position: relative;
     z-index: 3;
-    
-  }
+    margin: auto;
+    }
   
   .header-logo {
     min-width: 270px;
@@ -167,8 +166,7 @@ a {
     display: block;
     font-size: 26px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 40px;
   }
   .trend-list {
     margin-bottom: 45px;
@@ -179,6 +177,7 @@ a {
     text-transform: uppercase;
     text-align: center;
     position: relative; 
+    
   }
   .trend-list-name::after {
     content: "";
@@ -217,20 +216,19 @@ a {
   }
   .trend-post-info {
     margin-top: auto;
-    margin-left: 35px;
-    margin-bottom: 45px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
     position: relative;
     z-index: 3;
+    border: 2px solid #847850;
+    padding: 20px;
   }
-  .trend-post-info:focus {
-    outline-style: 2px solid;
-    outline-color: #b59f5b;
-    outline-offset: 20px;
-  }
-  .trend-card .post-name-big a {
+  
+.trend-card .post-name-big a {
     color:#ffffff;
   }
-  .card-1 {
+.card-1 {
     background-image: url("../images/trend1.jpg");
   }
   .card-2 {
@@ -280,8 +278,8 @@ a {
     text-transform: uppercase;
     font-weight: bold;
   }
-  .tags a:hover {
-    color: #b59f5b;
+  .tags a:hover,
+  .product-info a:hover {
     text-decoration: underline;
   }
   .tags > li {
@@ -400,7 +398,8 @@ a {
     background-size: 20px;
   }
   .search-button:hover,
-  .subscription-button:hover {
+  .subscription-button:hover,
+  .product-button:hover {
     background-color: #000000;
   }
   .search-button-description {
@@ -510,7 +509,35 @@ a {
   .topics-list a:hover {
     color: #b59f5b;
   }
-  
+  .section-name {
+    font-size: 16px;
+  }
+  .product-info a {
+    color: #b59f5b;
+  }
+  .product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .product-prices {
+    display: flex;
+  }
+  .old-price-product {
+    text-decoration: line-through;
+  }
+  .product-button {
+    border: none;
+    background-color: #b59f5b;
+    padding: 18px 30px;
+    text-transform: uppercase;
+    font-family: inherit;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: OpenSans;
+  }
+
   .footer-container {
     display: flex;
     margin-bottom: 73px;
