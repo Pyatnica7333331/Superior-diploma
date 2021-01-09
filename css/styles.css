@@ -83,6 +83,9 @@ a {
   .article-image {
     width: 330px;
   }
+  .product-list-item:first-child {
+    padding-top: 0;
+  }
   .side-bar {
     margin-left: auto;
     margin-right: auto;
@@ -460,9 +463,7 @@ h3 {
   line-height: 22px;
   position: relative;
 }
-.product-list-item:first-child {
-  padding-top: 0;
-}
+
 .product-info {
   margin-top: 25px;
 }
