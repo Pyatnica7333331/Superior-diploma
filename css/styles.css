@@ -59,6 +59,7 @@ a {
 }
 .header-logo {
   min-width: 270px;
+  transform: translate(25%, 0);
 }
 .menu-button {
   width: 24px;
