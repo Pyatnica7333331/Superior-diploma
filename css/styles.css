@@ -55,12 +55,8 @@ a {
 .header-container {
   display: flex;
   justify-content: space-between;
- 
 }
-.header-logo {
-  min-width: 270px;
-  transform: translate(25%, 0);
-}
+
 .menu-button {
   width: 24px;
   height: 20px;
@@ -573,11 +569,7 @@ ul {
     flex-direction: column-reverse;
     width: 100%;
   }
-  .header-logo {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
- 
+   
   .main-content,
   .side-bar,
   .footer-container {
