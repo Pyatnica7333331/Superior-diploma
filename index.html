@@ -38,7 +38,7 @@
               </ul>
             </nav>
           </div>
-          <h1>Блог о творчестве, спорте и образе жизни</h1>
+          <h1 id="site-name">Блог о творчестве, спорте и образе жизни</h1>
         </div>
       </header>
       <section>
@@ -236,7 +236,7 @@
             </section>
             <section>
               <form class="search">
-                <label>
+                <label class="search-label">
                 <span class="form-description">Введите фразу для поиска на сайте</span>
                 <input class="field" type="search" placeholder="Найти..." required />
                 </label>
@@ -248,8 +248,8 @@
             <h3 class="subscription-name section-name">Рассылка</h3>
             <form class="subscription">
               <label>
-                <span class="form-description">Введите электронную почту для подписки на рассылку</span>
-              <input type="email" class="field" placeholder="Ваш email-адрес" required>
+               <span class="form-description">Введите электронную почту для подписки на рассылку</span>
+               <input type="email" class="field" placeholder="Ваш email-адрес" required>
               </label>
               <button class="subscription-button">Подписаться</button>
             </form>
@@ -290,6 +290,7 @@
                   <source srcset="images/shop-item-mobile1.jpg" media="(max-width: 767px)">
                   <img src="images/shop-item-mobile1.jpg" alt="Подушка">
                 </picture>
+                <div class="product-main">
                 <div class="product-info">
                  <h3 class="product-name">Подушки на диван</h3>
                  <p>Набор из двух подушек с модными принтами. Видео о создании <a href="#0">здесь</a>.
@@ -302,6 +303,7 @@
                   </div>
                   <button class="product-button" type="button">В магазин</button>
                 </footer>
+               </div>
               </article>
               <article class="product-list-item">
                 <picture class="product-image">
@@ -310,6 +312,7 @@
                   <source srcset="images/shop-item-mobile2.jpg" media="(max-width: 767px)">
                   <img src="images/shop-item-mobile2.jpg" alt="Подушка">
                 </picture>
+                <div class="product-main">
                 <div class="product-info">
                  <h3 class="product-name">Кукла «Зайчик»</h3>
                  <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0">весенняя серия постов</a> в блоге и несколько подкастов.
@@ -321,6 +324,7 @@
                   </div>
                   <button class="product-button" type="button">В магазин</button>
                 </footer>
+              </div>
               </article>
               <article class="product-list-item">
                 <picture class="product-image">
@@ -329,22 +333,24 @@
                   <source srcset="images/shop-item-mobile3.jpg" media="(max-width: 767px)">
                   <img src="images/shop-item-mobile3.jpg" alt="Рамка">
                 </picture>
-                <div class="product-info">
+                <div class="product-main">
+                 <div class="product-info">
                  <h3 class="product-name">Шестиугольная рамка</h3>
                  <p>Необычная рамка для украшения дома из видео <a href="#0">«Как сделать рамку из подручных средств за 30 минут»</a>.
                  </p>
-                </div>
-                <footer class="product-footer">
+                 </div>
+                 <footer class="product-footer">
                   <div class="product-prices">
                     <div class="old-price-product">500 ₽</div>
                     <div class="new-price-product">400 ₽</div>
                   </div>
                   <button class="product-button" type="button">В магазин</button>
-                </footer>
+                 </footer>
+                </div>
               </article>
             </div>
-      </section>
-      <footer>
+    </section>
+    <footer>
         <div class="footer-container">
           <adress class="widget-socials">
             <a href="#0" class="twitter"><span class="widget-socials-description">twitter</span>
@@ -361,5 +367,36 @@
           </div>
         <div class="copyright"><a href="#0">Copyright © 2009–2019 City Blog LLC.</a>
         </div>
-      </footer>   
+    </footer>
+    <section class="popap">
+      <button class="popap-close">
+        <span class="form-description">Закрыть окно</span> 
+      </button>
+     <div class="popap-block">
+      <h2 class="popap-block-name section-name">Ваш фидбек</h2>
+      <form class="frequency-form">
+        <label>Как часто вы заходите на наш сайт?
+          <select name="" class="frequency-row">
+            <option value="each-day" selected>Почти каждый день</option>
+            <option value="one-per-several-days">Раз в несколько дней</option>
+            <option value="one-per-several-weeks">Раз в несколько недель</option>
+            <option value="several-times-per-year">Несколько раз в год</option>
+          </select>
+        </label>
+      </form>
+      <form class="subscription-question-form">
+        <span class="form-group">Вы подписаны на e-mail рассылку?</span>
+         <label><input type="radio" name="subscription-choice" class="subscription-radio" value="Да"><span class="radio-text">Да</span></label>
+         <label><input type="radio" name="subscription-choice" class="subscription-radio" value="Нет"><span class="radio-text">Нет</span></label>  
+      </form>
+      <form class="content-question-form">
+        <label>Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+         <textarea type="text" class="field-textarea" placeholder="Может, больше рецептов?" required></textarea>
+        </label>
+      </form>
+      <button class="popap-button">
+        Отправить
+      </button>
+      </div> 
+    </section>
 </body>
