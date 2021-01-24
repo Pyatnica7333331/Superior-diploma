@@ -19,13 +19,14 @@ body {
 a {
   text-decoration: none;
 }
-
+ul {
+  -moz-user-disabled: none;
+}
 .header {
   background-image: url("../images/banner-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  width: 100vw;
   background-color: #7e6f6f;
   position: relative;
   color: #ffffff;
@@ -79,10 +80,10 @@ a {
 .menu-button:before {
   top: 0;
 }
-.menu-button:after {
+.menu-button::after {
   bottom: 0;
 }
-.menu-button:before, .menu-button:after {
+.menu-button::before, .menu-button::after {
   content: "";
   width: 100%;
   height: 20%;
@@ -90,7 +91,7 @@ a {
   position: absolute;
   left: 0;
 }
-h1 {
+#site-name {
   text-transform: uppercase;
   font-size: 26px;
   line-height: 1.38em;
@@ -126,7 +127,7 @@ h1 {
   top: 30px;
 }
 .trend-card {
-  height: 230px;
+  min-height: 230px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -287,6 +288,7 @@ h1 {
   display: flex;
   flex-wrap: nowrap;
   position: relative;
+  width: 100%;
 }
 .form-description {
   display: none;
@@ -294,9 +296,7 @@ h1 {
 .field:focus {
   outline: 1px solid #b59f5b;
 }
-ul {
-  -moz-user-disabled: none;
-}
+
 .field,
 .search-button {
   -webkit-appearance: none;
@@ -313,7 +313,9 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+.search-label {
+  width: 100%;
+}
 .search-button {
   padding-left: 0;
   margin-left: 0;
@@ -330,7 +332,8 @@ ul {
 }
 .search-button:hover,
 .subscription-button:hover,
-.product-button:hover {
+.product-button:hover,
+.popap-button:hover {
   background-color: #000000;
 }
 .search-button-description {
@@ -458,13 +461,16 @@ ul {
   padding: 25px;
   font-size: 15px;
   line-height: 1.5em;
-  border: 3px solid #d3c59d;
 }
-
+.product-main {
+  outline: 3px solid #d3c59d;
+  outline-offset: 25px;
+}
 .product-info {
   margin-top: 25px;
   font-size: 15px;
   line-height: 1.5em;
+  
 }
 .product-info a {
   color: #b59f5b;
@@ -503,6 +509,8 @@ ul {
   display: flex;
   margin-bottom: 73px;
   margin-top: 64px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .widget-socials {
   display: flex;
@@ -551,6 +559,147 @@ ul {
 .copyright a {
   color: #999999;
 }
+.popap {
+ position: fixed;
+ display: flex;
+ z-index: 99;
+ margin: auto;
+ background-color: #ffffff;
+ width: 390px;
+ left: calc(50% - 185px);
+ top: 50%;
+ transform: translateY(-50%);
+}
+.popap-close {
+  position: absolute;
+  width: 29px;
+  height: 27px;
+  top: -32px;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url("../svg/form-x.svg");
+  background-repeat: no-repeat;
+}
+
+.popap-block {
+ position: relative;
+ padding: 28px 27px 30px 24px;
+ font-size: 13px;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color:black;
+  opacity: 0.6;
+  z-index: 98;
+}
+
+.popap-block-name::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 66px;
+  height: 3px;
+  background-color: #e1d9bd;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+}
+.form-group {
+  display: block;
+}
+.frequency-row {
+  height: 48px;
+  appearance: none;
+  background-image: url("../svg/form-arrows.svg") ;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 11px;
+  padding-right: 40px;
+  
+}
+.frequency-row,
+.field-textarea{
+  margin-top: 10px;
+  padding-left: 20px;
+  border: none;
+  background-color: #f4f7f6;
+  box-sizing: border-box;
+  width: 100% ;
+  color: #a2a4a3;
+}
+.frequency-row:focus,
+.field-textarea:focus {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #e6e3d2;
+}
+.subscription-question-form {
+  margin-top: 32px;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+.radio-text::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 6px;
+  background-image: url("../svg/form-empty-circle.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25px;
+}
+.subscription-radio:checked ~ .radio-text::before {
+  background-image: url("../svg/form-circle.svg");
+  background-size: 25px;
+}
+.subscription-radio {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+}
+.content-question-form {
+  margin-top: 32px;
+}
+.field-textarea {
+  min-height: 130px;
+  max-height: 200px;
+  font: inherit;
+  padding-top: 22px;
+  padding-right: 20px;
+  resize: none;
+}
+.popap-button {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 50px;
+  border: 0;
+  border-radius: 0;
+  margin-top: 26px;
+  background-color: #b59f5b;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+}
+.popap, body::after {
+ display: none;
+}
+
 @media (max-width: 767px) {
   .menu {
     margin-bottom: 165px;
@@ -569,10 +718,14 @@ ul {
     flex-direction: column-reverse;
     width: 100%;
   }
-   
+   .header-logo {
+     max-width: 370px;
+     min-width: 270px;
+     margin-left: 50%;
+     transform: translateX(-50%);
+   }
   .main-content,
-  .side-bar,
-  .footer-container {
+  .side-bar {
     display: block;
     width: 330px;
   }
@@ -653,7 +806,7 @@ ul {
   .menu-link {
     color: #ffffff;
   }
-  h1 {
+  #site-name {
     width: 710px;
     font-size: 45px;
     line-height: 1.67em;
@@ -672,7 +825,7 @@ ul {
     flex-wrap: wrap;
   }
   .trend-card {
-    height: 320px;
+    min-height: 320px;
     max-width: 24.7%;
   }
   .trend-card:nth-child(n + 2) {
@@ -764,7 +917,7 @@ ul {
     display: flex;
     align-items: center;
   }
-  h1 {
+  #site-name {
     font-size: 40px;
   }
   .trend-list {
@@ -798,10 +951,10 @@ ul {
   .main-content {
     display: flex;
     justify-content: space-between;
+    width: 698px;
   }
   .main-content,
   .footer-container {
-    width: 698px;
     padding: 50px 35px;
     margin: 0 auto;
   }
