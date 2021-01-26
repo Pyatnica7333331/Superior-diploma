@@ -461,10 +461,13 @@ ul {
   padding: 25px;
   font-size: 15px;
   line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
 }
 .product-main {
   outline: 3px solid #d3c59d;
   outline-offset: 25px;
+  flex-grow: 1;
 }
 .product-info {
   margin-top: 25px;
